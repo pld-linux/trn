@@ -8,6 +8,7 @@ Release:	18
 License:	distributable
 Group:		Applications/News
 Source0:	ftp://ftp.uu.net:/networking/news/readers/trn/%{name}-%{version}.tar.gz
+# Source0-md5:	0337ebc89f64825bc4ce2fb12e5b96a7
 Source1:	%{name}.desktop
 Patch0:		%{name}-linux.patch
 Patch1:		%{name}-sigtstp.patch
