@@ -28,7 +28,7 @@ Zainstaluj ten pakiet, je¶li potrzebujesz prostego czytnika news,
 który poka¿e ci listê artyku³ów w postaci w±tków.
 
 %prep
-%setup -q 
+%setup -q
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
@@ -50,7 +50,7 @@ install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/X11/wmconfig/trn
 
 gzip -9nf README MANIFEST HINTS.TRN HACKERSGUIDE NEW
 
-%clean 
+%clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
