@@ -48,14 +48,12 @@ chmod 755 filexp makedir
 install -d $RPM_BUILD_ROOT%{_sysconfdir}/X11/wmconfig
 install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/X11/wmconfig/trn
 
-gzip -9nf README MANIFEST HINTS.TRN HACKERSGUIDE NEW
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {README,MANIFEST,HINTS.TRN,HACKERSGUIDE,NEW}.gz
+%doc README MANIFEST HINTS.TRN HACKERSGUIDE NEW
 %attr(755,root,root) %{_bindir}/trn
 %attr(755,root,root) %{_bindir}/newsetup
 %attr(755,root,root) %{_bindir}/newsgroups
