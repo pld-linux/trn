@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=TRN
+Type=Application
+Comment=TRN - A Usenet newsreader
+Comment[pl]=TRN - czytnik newsów 
+Exec=trn
+Terminal=1
+# vi: encoding=utf-8
