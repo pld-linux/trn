@@ -25,7 +25,7 @@ postings in threaded format.
 %patch2 -p1
 
 %build
-make CFLAGS="$RPM_OPT_FLAGS"
+%{__make} CFLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -33,7 +33,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_libdir}/trn}
 
 chmod 755 filexp makedir
 
-make install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT/etc/X11/wmconfig
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/wmconfig/trn
