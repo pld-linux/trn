@@ -5,8 +5,6 @@ Version:	3.6
 Release:	17
 License:	distributable
 Group:		Applications/News
-Group(de):	Applikationen/News
-Group(pl):	Aplikacje/News
 Source0:	ftp://ftp.uu.net:/networking/news/readers/trn/%{name}-%{version}.tar.gz
 Source1:	%{name}.wmconfig
 Patch0:		%{name}-3.6-linux.patch
