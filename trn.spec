@@ -1,5 +1,7 @@
 Summary:	A news reader that displays postings in threaded format
+Summary(es):	Lector de News con Threads
 Summary(pl):	Czytnik newsów wy¶wietlaj±cy posty w postaci w±tków
+Summary(pt_BR):	Leitor de News com Threads
 Name:		trn
 Version:	3.6
 Release:	17
@@ -17,15 +19,17 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Trn is a basic news reader that supports threading. This version is
 configured to read news from an NNTP news server.
 
-Install trn if you need a basic news reader that shows you newsgroup
-postings in threaded format.
+%description -l es
+'trn' es uno de los lectores originales de threaded news. Esta versión
+está configurada para leer news de un servidor NNTP.
 
 %description -l pl
 Trn to prosty czytnik news obs³uguj±cy w±tkowanie. Ta wersja jest
 skonfigurowana do pobierania artyku³ów z serwera NNTP.
 
-Zainstaluj ten pakiet, je¶li potrzebujesz prostego czytnika news,
-który poka¿e ci listê artyku³ów w postaci w±tków.
+%description -l pt_BR
+'trn' é um dos leitores originais de threaded news. Esta versão é
+configurada para ler news de um servidor NNTP.
 
 %prep
 %setup -q
