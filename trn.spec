@@ -12,6 +12,7 @@ Source1:	%{name}.wmconfig
 Patch0:		%{name}-3.6-linux.patch
 Patch1:		%{name}-3.6-sigtstp.patch
 Patch2:		%{name}-3.6-bool.patch
+Patch3: 	%{name}-time-include.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -26,6 +27,7 @@ postings in threaded format.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 %{__make} CFLAGS="%{rpmcflags}"
