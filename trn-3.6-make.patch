@@ -1,0 +1,16 @@
+--- trn-3.6/Makefile.orig	Wed Sep  2 14:21:22 1998
++++ trn-3.6/Makefile	Wed Sep  2 14:25:54 1998
+@@ -29,9 +29,10 @@
+ CFLAGS = $(RPM_OPT_FLAGS)
+ LDFLAGS = -s
+ 
+-rnbin = /usr/bin
+-rnlib = /usr/lib/trn
+-mansrc = /usr/man/man1
++
++rnbin = $(RPM_INSTALL)/usr/bin
++rnlib = $(RPM_INSTALL)/usr/lib/trn
++mansrc = $(RPM_INSTALL)/usr/man/man1
+ manext = 1
+ NNTPFLAGS = 
+ ndirc = 

@@ -1,0 +1,4 @@
+trn name "trn"
+trn description "TRN Threaded News Reader"
+trn exec "xterm -e trn &"
+trn group "Utilities/Misc"

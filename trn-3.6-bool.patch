@@ -1,0 +1,11 @@
+--- trn-3.6/common.h.mike	Wed Feb 10 17:15:58 1999
++++ trn-3.6/common.h	Wed Feb 10 17:16:19 1999
+@@ -105,7 +105,7 @@
+ 
+ /* some handy defs */
+ 
+-#define bool char
++#define bool int
+ #define bool_int int
+ #define char_int int
+ #ifndef TRUE
