@@ -4,7 +4,7 @@ Summary(pl):	Czytnik newsów wy¶wietlaj±cy posty w postaci w±tków
 Summary(pt_BR):	Leitor de News com Threads
 Name:		trn
 Version:	3.6
-Release:	17
+Release:	18
 License:	distributable
 Group:		Applications/News
 Source0:	ftp://ftp.uu.net:/networking/news/readers/trn/%{name}-%{version}.tar.gz
