@@ -7,9 +7,9 @@ License:	distributable
 Group:		Applications/News
 Source0:	ftp://ftp.uu.net:/networking/news/readers/trn/%{name}-%{version}.tar.gz
 Source1:	%{name}.wmconfig
-Patch0:		%{name}-3.6-linux.patch
-Patch1:		%{name}-3.6-sigtstp.patch
-Patch2:		%{name}-3.6-bool.patch
+Patch0:		%{name}-linux.patch
+Patch1:		%{name}-sigtstp.patch
+Patch2:		%{name}-bool.patch
 Patch3:		%{name}-time-include.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
