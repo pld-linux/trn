@@ -6,4 +6,5 @@ Comment[pl]=TRN - czytnik newsów
 Exec=trn
 Terminal=true
 Encoding=UTF-8
+Categories=Network;News;
 # vi: encoding=utf-8
