@@ -1,0 +1,12 @@
+diff -urN trn-3.6.orig/nntp.c trn-3.6/nntp.c
+--- trn-3.6.orig/nntp.c	Sat Nov 19 07:01:23 1994
++++ trn-3.6/nntp.c	Fri Jul  6 12:55:37 2001
+@@ -4,7 +4,7 @@
+  * for any use whatsoever, and it is provided as is. Any use of this software
+  * is at the user's own risk. 
+  */
+-
++#include <time.h>
+ #include "EXTERN.h"
+ #include "common.h"
+ #include "util.h"
