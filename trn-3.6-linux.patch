@@ -31,7 +31,7 @@
 +
 +#	interesting questions about man
 +# 	where do man page sources go?
-+mansrc='/usr/man/man1'
++mansrc='/usr/share/man/man1'
 +#	what extention do man pages get?
 +manext='1'
 +
@@ -181,9 +181,9 @@
 +CFLAGS = $(RPM_OPT_FLAGS)
 +LDFLAGS = -s
 +
-+rnbin = /usr/bin
-+rnlib = /usr/lib/trn
-+mansrc = /usr/man/man1
++rnbin = $(DESTDIR)/usr/bin
++rnlib = $(DESTDIR)/usr/lib/trn
++mansrc = $(DESTDIR)/usr/share/man/man1
 +manext = 1
 +NNTPFLAGS = 
 +ndirc = 
@@ -192,7 +192,7 @@
 +strftimeo = 
 +installfilexp = /usr/lib/trn/filexp
 +
-+libs =  -ltermcap  -lm 
++libs =  -lncurses  -lm 
 +public = trn newsetup newsgroups Pnews Rnmail trn-artchk $(nntpbin)
 +private = norm.saver mbox.saver makedir Pnews.header Speller filexp
 +util = makedepend newsnews
@@ -2969,7 +2969,7 @@
 +d_getcwd='undef'
 +d_getwd='define'
 +d_havetlib='define'
-+termlib='-ltermcap'
++termlib='-lncurses'
 +d_ignoreorg='undef'
 +d_internet='define'
 +d_memcmp='define'
@@ -3046,10 +3046,10 @@
 +statedist='none'
 +mailer='/usr/sbin/sendmail'
 +mailfile='/var/spool/mail/%L'
-+installmansrc='/usr/man/man1'
++installmansrc='/usr/share/man/man1'
 +manext='1'
-+mansrc='/usr/man/man1'
-+mansrcexp='/usr/man/man1'
++mansrc='/usr/share/man/man1'
++mansrcexp='/usr/share/man/man1'
 +mboxchar='F'
 +c=''
 +n='-n'
@@ -3076,7 +3076,7 @@
 +shsharp='true'
 +spitshell='cat'
 +startsh='#!/bin/sh'
-+sysman='/usr/man/man1'
++sysman='/usr/share/man/man1'
 +d_usemt='define'
 +d_useov='define'
 +overviewdir='/var/spool/threads'
@@ -3207,11 +3207,10 @@
 +rm $deptmp
 --- trn-3.6/makedir.orig	Mon Jul 21 15:40:51 1997
 +++ trn-3.6/makedir	Mon Jul 21 15:40:51 1997
-@@ -0,0 +1,52 @@
+@@ -0,0 +1,51 @@
 +#!/bin/sh
 +# $Id$
 +# 
-+# $Log$
 +# Revision 2.11  90/09/17  17:03:55  hokey
 +# 2.11 alpha baseline
 +# 
