@@ -1,18 +1,21 @@
-Summary:	A news reader that displays postings in threaded format.
+Summary:	A news reader that displays postings in threaded format
+Summary(pl):	Czytnik newsów wy¶wietlaj±cy posty w postaci w±tków
 Name:		trn
 Version:	3.6
 Release:	17
 Copyright:	distributable
-Group:		Applications/Internet
-Source0: 	ftp://ftp.uu.net:/networking/news/readers/trn/%{name}-%{version}.tar.gz
-Source1:	trn.wmconfig
-Patch0:		trn-3.6-linux.patch
-Patch1:		trn-3.6-sigtstp.patch
-Patch2:		trn-3.6-bool.patch
+Group:		Applications/News
+Group(de):	Applikationen/News
+Group(pl):	Aplikacje/News
+Source0:	ftp://ftp.uu.net:/networking/news/readers/trn/%{name}-%{version}.tar.gz
+Source1:	%{name}.wmconfig
+Patch0:		%{name}-3.6-linux.patch
+Patch1:		%{name}-3.6-sigtstp.patch
+Patch2:		%{name}-3.6-bool.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Trn is a basic news reader that supports threading.  This version is
+Trn is a basic news reader that supports threading. This version is
 configured to read news from an NNTP news server.
 
 Install trn if you need a basic news reader that shows you newsgroup
@@ -25,7 +28,7 @@ postings in threaded format.
 %patch2 -p1
 
 %build
-%{__make} CFLAGS="$RPM_OPT_FLAGS"
+%{__make} CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -35,13 +38,11 @@ chmod 755 filexp makedir
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT/etc/X11/wmconfig
-install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/wmconfig/trn
+install -d $RPM_BUILD_ROOT%{_sysconfdir}/X11/wmconfig
+install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/X11/wmconfig/trn
 
-strip --strip-unneeded $RPM_BUILD_ROOT%{_bindir}/* || :
+gzip -9nf README MANIFEST HINTS.TRN HACKERSGUIDE NEW
 
-gzip -9nf README MANIFEST HINTS.TRN HACKERSGUIDE NEW \
-	$RPM_BUILD_ROOT%{_mandir}/man1/*
 %clean 
 rm -rf $RPM_BUILD_ROOT
 
@@ -62,4 +63,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/Rnmail.1*
 %{_mandir}/man1/newsetup.1*
 %{_mandir}/man1/newsgroups.1*
-%config /etc/X11/wmconfig/trn
+%config %{_sysconfdir}/X11/wmconfig/trn
