@@ -9,7 +9,7 @@ Source1:	trn.wmconfig
 Patch0:		trn-3.6-linux.patch
 Patch1:		trn-3.6-sigtstp.patch
 Patch2:		trn-3.6-bool.patch
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Trn is a basic news reader that supports threading.  This version is
