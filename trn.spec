@@ -6,7 +6,7 @@ Release:	17
 License:	distributable
 Group:		Applications/News
 Source0:	ftp://ftp.uu.net:/networking/news/readers/trn/%{name}-%{version}.tar.gz
-Source1:	%{name}.wmconfig
+Source1:	%{name}.desktop
 Patch0:		%{name}-linux.patch
 Patch1:		%{name}-sigtstp.patch
 Patch2:		%{name}-bool.patch
@@ -39,14 +39,13 @@ który poka¿e ci listê artyku³ów w postaci w±tków.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_libdir}/trn}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_libdir}/trn,%{_applnkdir}/Network/News}
 
 chmod 755 filexp makedir
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_sysconfdir}/X11/wmconfig
-install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/X11/wmconfig/trn
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Network/News
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -68,4 +67,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/Rnmail.1*
 %{_mandir}/man1/newsetup.1*
 %{_mandir}/man1/newsgroups.1*
-%config %{_sysconfdir}/X11/wmconfig/trn
+%{_applnkdir}/Network/News/*
