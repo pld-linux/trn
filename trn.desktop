@@ -4,6 +4,6 @@ Type=Application
 Comment=TRN - A Usenet newsreader
 Comment[pl]=TRN - czytnik newsów 
 Exec=trn
-Terminal=1
+Terminal=true
 Encoding=UTF-8
 # vi: encoding=utf-8
