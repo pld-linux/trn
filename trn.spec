@@ -3,7 +3,7 @@ Summary(pl):	Czytnik newsów wy¶wietlaj±cy posty w postaci w±tków
 Name:		trn
 Version:	3.6
 Release:	17
-Copyright:	distributable
+License:	distributable
 Group:		Applications/News
 Group(de):	Applikationen/News
 Group(pl):	Aplikacje/News
@@ -12,7 +12,7 @@ Source1:	%{name}.wmconfig
 Patch0:		%{name}-3.6-linux.patch
 Patch1:		%{name}-3.6-sigtstp.patch
 Patch2:		%{name}-3.6-bool.patch
-Patch3: 	%{name}-time-include.patch
+Patch3:		%{name}-time-include.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
