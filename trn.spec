@@ -22,6 +22,13 @@ configured to read news from an NNTP news server.
 Install trn if you need a basic news reader that shows you newsgroup
 postings in threaded format.
 
+%description -l pl
+Trn to prosty czytnik news obs³uguj±cy w±tkowanie. Ta wersja jest
+skonfigurowana do pobierania artyku³ów z serwera NNTP.
+
+Zainstaluj ten pakiet, je¶li potrzebujesz prostego czytnika news,
+który poka¿e ci listê artyku³ów w postaci w±tków.
+
 %prep
 %setup -q 
 %patch0 -p1
