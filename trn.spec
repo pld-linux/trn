@@ -14,6 +14,7 @@ Patch0:		%{name}-linux.patch
 Patch1:		%{name}-sigtstp.patch
 Patch2:		%{name}-bool.patch
 Patch3:		%{name}-time-include.patch
+BuildRequires:	byacc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -40,17 +41,19 @@ configurada para ler news de um servidor NNTP.
 %patch3 -p1
 
 %build
-%{__make} CFLAGS="%{rpmcflags}"
+%{__make} \
+	CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_libdir}/trn,%{_applnkdir}/Network/News}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_libdir}/trn,%{_desktopdir}}
 
 chmod 755 filexp makedir
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Network/News
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -72,4 +75,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/Rnmail.1*
 %{_mandir}/man1/newsetup.1*
 %{_mandir}/man1/newsgroups.1*
-%{_applnkdir}/Network/News/*
+%{_desktopdir}/*
