@@ -14,7 +14,9 @@ Patch0:		%{name}-linux.patch
 Patch1:		%{name}-sigtstp.patch
 Patch2:		%{name}-bool.patch
 Patch3:		%{name}-time-include.patch
-BuildRequires:	byacc
+Patch4:		%{name}-bison.patch
+BuildRequires:	bison
+BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -39,6 +41,7 @@ configurada para ler news de um servidor NNTP.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 %build
 %{__make} \
