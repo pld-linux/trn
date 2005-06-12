@@ -1,0 +1,20 @@
+--- trn-3.6/Makefile.orig	2005-06-12 16:02:45.000000000 +0200
++++ trn-3.6/Makefile	2005-06-12 16:02:23.000000000 +0200
+@@ -22,7 +22,7 @@
+ 
+ CC = gcc
+ TOUCH = touch
+-#YACC = yacc
++YACC = bison
+ #LINT = lint
+ lintflags = -phbvxac 
+ 
+@@ -105,7 +105,7 @@
+ parsedate.c: parsedate.y
+ 	@echo 'Expect 6 shift/reduce conflicts'
+ 	$(YACC) $(srcdir)/parsedate.y
+-	mv -f y.tab.c parsedate.c
++	mv -f parsedate.tab.c parsedate.c
+ 
+ unipatch: unipatch.o
+ 	$(CC) $(LDFLAGS) unipatch.o -o unipatch
