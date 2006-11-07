@@ -78,4 +78,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/Rnmail.1*
 %{_mandir}/man1/newsetup.1*
 %{_mandir}/man1/newsgroups.1*
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
