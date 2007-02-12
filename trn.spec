@@ -1,7 +1,7 @@
 Summary:	A news reader that displays postings in threaded format
-Summary(es.UTF-8):   Lector de News con Threads
-Summary(pl.UTF-8):   Czytnik newsów wyświetlający posty w postaci wątków
-Summary(pt_BR.UTF-8):   Leitor de News com Threads
+Summary(es.UTF-8):	Lector de News con Threads
+Summary(pl.UTF-8):	Czytnik newsów wyświetlający posty w postaci wątków
+Summary(pt_BR.UTF-8):	Leitor de News com Threads
 Name:		trn
 Version:	3.6
 Release:	18
